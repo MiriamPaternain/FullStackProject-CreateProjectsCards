@@ -1,0 +1,65 @@
+.uploadBtn {
+    text-align: center;
+
+    &_project {
+        width: 160px;
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        border: none;
+        height: 43px;
+        background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+        border-radius: 40px;
+    }
+
+    &_author {
+        width: 160px;
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        border: none;
+
+        height: 43px;
+        background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+        border-radius: 40px;
+    }
+}
+
+.createCard {
+    text-align: center;
+
+    &_Btn {
+        width: 160px;
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        border: none;
+        height: 43px;
+        background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+        border-radius: 40px;
+        width: 200px;
+        border: solid 2px white;
+    }
+}
+
+/* .btn-color {
+  border-radius: 20px;
+  width: 85px;
+  height: 30px;
+  font-weight: bold;
+} */
+
+/* .btn-color-dark {
+  background-color: black;
+  color: white;
+}
+ */
+.cardMessage {
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    &_hidden {
+        display: none;
+    }
+}

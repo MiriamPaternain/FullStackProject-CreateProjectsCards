@@ -130,7 +130,7 @@ function App() {
 
             <section className='cardMessage'>
               <span className='cardMessage_hidden'> La tarjeta ha sido creada: </span>
-              <a href='' className='' target='_blank' rel='noreferrer'>
+              <a href='./#' className='' target='_blank' rel='noreferrer'>
                 {' '}
               </a>
             </section>
