@@ -10,11 +10,10 @@ function App() {
   /* RETURN --> HTML */
   return (
     <div>
-      <div className='container'>
+      <div className='main'>
         <header className='header'>
           <p className='text'>Proyectos Molones</p>
         </header>
-        <main className='main'>
           <section className='preview'>
             <img className='preview_coverImage' src={cover} alt='' />
 
@@ -37,7 +36,7 @@ function App() {
                   accusantium placeat odit corrupti ipsum!
                 </p>
                 <section className='preview_technologies'>
-                  <p className='preview_project--techtnologiesText'>React JS, MongoDB</p>
+                  <p className='preview_project--technologiesText'>React JS, MongoDB</p>
                 </section>
               </section>
 
@@ -47,7 +46,6 @@ function App() {
 
           <section className='form'>
             <h2 className='title'>Información</h2>
-
             <section className='ask-info'>
               <p className='subtitle'>Cuéntanos sobre el proyecto</p>
               <hr className='line' />
@@ -137,7 +135,6 @@ function App() {
               </a>
             </section>
           </section>
-        </main>
       </div>
     </div>
   );
