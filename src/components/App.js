@@ -16,31 +16,32 @@ function App() {
         </header>
         <main className='main'>
           <section className='preview'>
-            <img className='image' src={cover} alt='' />
+            <img className='preview_coverImage' src={cover} alt='' />
 
-            <section className='autor'>
-              <section className='info-project'>
-                <p className='subtitle'>Personal Project Card</p>
-                <hr className='line' />
+            <section className='preview_author'>
+              <section className='preview_author--personalInfo'>
+                <img className='preview_author--image' src={user} alt='' />
+                <p className='preview_author--job'>Full Stack Developer</p>
+                <p className='preview_author--name'>Emmelie Björklund</p>
+              </section>
+              <section className='preview_project'>
+                <p className='preview_project--subtitle'>Personal Project Card</p>
+                <hr className='preview_project--line' />
 
-                <h2 className='title'>Elegant Workspace</h2>
-                <p className='slogan'>Diseños Exclusivos</p>
-                <p className='desc'>
+                <h2 className='preview_project--title'>Elegant Workspace</h2>
+                <p className='preview_project--slogan'>Diseños Exclusivos</p>
+                <p className='preview_project--description'>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Libero, delectus? Voluptates at hic aliquam porro ad suscipit
                   harum laboriosam saepe earum doloribus aperiam, ullam culpa
                   accusantium placeat odit corrupti ipsum!
                 </p>
-                <section className='technologies'>
-                  <p className='text'>React JS, MongoDB</p>
+                <section className='preview_technologies'>
+                  <p className='preview_project--techtnologiesText'>React JS, MongoDB</p>
                 </section>
               </section>
 
-              <section className='info-autor'>
-                <img className='image' src={user} alt='' />
-                <p className='job'>Full Stack Developer</p>
-                <p className='name'>Emmelie Björklund</p>
-              </section>
+              
             </section>
           </section>
 
