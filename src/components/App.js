@@ -12,7 +12,7 @@ function App() {
     <div>
       <div className='main'>
         <header className='header'>
-          <p className='text'>Proyectos Molones</p>
+          <p className='header_text'>Proyectos Molones</p>
         </header>
           <section className='preview'>
             <img className='preview_coverImage' src={cover} alt='' />
@@ -45,13 +45,13 @@ function App() {
           </section>
 
           <section className='form'>
-            <h2 className='title'>Información</h2>
-            <section className='ask-info'>
-              <p className='subtitle'>Cuéntanos sobre el proyecto</p>
-              <hr className='line' />
+            <h2 className='form_title'>Información</h2>
+            <section className='form_projectInfo'>
+              <p className='form_projectInfo--subtitle'>Cuéntanos sobre el proyecto</p>
+              <hr className='form_projectInfo--line' />
             </section>
 
-            <fieldset className='project'>
+            <fieldset className='form_projectInfo--projectForm'>
               <input
                 className='input'
                 type='text'
@@ -96,12 +96,12 @@ function App() {
               ></textarea>
             </fieldset>
 
-            <section className='ask-info'>
-              <p className='subtitle'>Cuéntanos sobre la autora</p>
-              <hr className='line' />
+            <section className='form_authorInfo'>
+              <p className='form_authorInfo--subtitle'>Cuéntanos sobre la autora</p>
+              <hr className='form_authorInfo--line' />
             </section>
 
-            <fieldset className='autor'>
+            <fieldset className='form_authorInfo--authorForm'>
               <input
                 className='input'
                 type='text'
@@ -118,18 +118,18 @@ function App() {
               />
             </fieldset>
 
-            <section className='buttons-img'>
-              <button className='btn'>Subir foto de proyecto</button>
-              <button className='btn'>Subir foto de autora</button>
+            <section className='uploadBtn'>
+              <button className='uploadBtn_project'>Subir foto de proyecto</button>
+              <button className='uploadBtn_author'>Subir foto de autora</button>
             </section>
-            <section className='buttons-img'>
-              <button className='btn-large' onClick='{handleClickCreateCard}'>
+            <section className='createCard'>
+              <button className='createCard_Btn' onClick='{handleClickCreateCard}'>
                 Crear Tarjeta
               </button>
             </section>
 
-            <section className='card'>
-              <span className=''> La tarjeta ha sido creada: </span>
+            <section className='cardMessage'>
+              <span className='cardMessage_hidden'> La tarjeta ha sido creada: </span>
               <a href='' className='' target='_blank' rel='noreferrer'>
                 {' '}
               </a>

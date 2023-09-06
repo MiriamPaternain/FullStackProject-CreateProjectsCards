@@ -6,6 +6,15 @@
   padding: 10px;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &_text {
+    color: white;
+  }
+}
+
 .preview {
   &_coverImage {
     object-fit: cover;
@@ -109,4 +118,147 @@
   margin-top: 50px;
   padding: 10px;
   border-radius: 10px;
+  &_title {
+    color: #ffffff;
+    text-align: center;
+  }
+  &_projectInfo {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    &--subtitle {
+      padding-bottom: 10px;
+    }
+    &--line {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+    }
+    &--projectForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: none;
+    }
+  }
+  &_authorInfo {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    &--subtitle {
+      padding-bottom: 10px;
+    }
+    &--line {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+    }
+    &--authorForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: none;
+    }
+  }
+}
+
+.textarea {
+  background-color: #302c42;
+  border-color: white;
+  border-radius: 15px;
+  height: 45px;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-top: 5px;
+  overflow-y: scroll;
+  height: 110px;
+}
+.input {
+  background-color: #302c42;
+  border-color: white;
+  border-radius: 15px;
+  height: 42.72px;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #ffffff;
+}
+
+.uploadBtn {
+  text-align: center;
+
+  &_project {
+    width: 160px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+  }
+  &_author {
+    width: 160px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+  }
+}
+
+.createCard {
+  text-align: center;
+  &_Btn {
+    width: 160px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+    width: 200px;
+    border: solid 2px white;
+  }
+}
+
+/* .btn-color {
+  border-radius: 20px;
+  width: 85px;
+  height: 30px;
+  font-weight: bold;
+} */
+
+/* .btn-color-dark {
+  background-color: black;
+  color: white;
+}
+ */
+.cardMessage {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  &_hidden {
+    display: none;
+  }
 }
