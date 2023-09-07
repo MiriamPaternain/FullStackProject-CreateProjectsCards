@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/App.scss';
 import cover from '../images/cover.jpeg';
 import user from '../images/user.jpeg';
-
+import Header from './Header';
 function App() {
   //Variables de estado
 
@@ -43,9 +43,8 @@ function App() {
   return (
     <div>
       <div className='main'>
-        <header className='header'>
-          <p className='header_text'>Proyectos Molones</p>
-        </header>
+        <Header />
+        
         <section className='preview'>
           <img className='preview_coverImage' src={cover} alt='' />
 
