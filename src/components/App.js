@@ -17,6 +17,8 @@ function App() {
     job: '',
   });
 
+  const [serverResponse, setServerResponse] = useState({});
+
   //Funciones
 
   const handleInputData = (ev) => {
@@ -25,8 +27,18 @@ function App() {
   };
 
   const handleClickCreateCard = (ev) => {
-    
-  }
+    ev.preventDesfault();
+
+    fetch('https://dev.adalab.es/api/projectCard', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setServerResponse(data);
+      });
+  };
 
   return (
     <div>
@@ -169,10 +181,7 @@ function App() {
             <button className='uploadBtn_author'>Subir foto de autora</button>
           </section>
           <section className='createCard'>
-            <button
-              className='createCard_Btn'
-              onClick={handleClickCreateCard}
-            >
+            <button className='createCard_Btn' onClick={handleClickCreateCard}>
               Crear Tarjeta
             </button>
           </section>
