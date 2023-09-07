@@ -5,6 +5,7 @@ import user from '../images/user.jpeg';
 
 function App() {
   //Variables de estado
+
   const [data, setData] = useState({
     projectName: '',
     slogan: '',
@@ -15,12 +16,17 @@ function App() {
     author: '',
     job: '',
   });
-const handleInputData = (ev) => {
-  setData({
-    ...data, 
-    [ev.target.name]: ev.target.value,
-  });
-};
+
+  //Funciones
+
+  const handleInputData = (ev) => {
+    const clonedData = { ...data, [ev.target.id]: ev.target.value };
+    setData(clonedData);
+  };
+
+  const handleClickCreateCard = (ev) => {
+    
+  }
 
   return (
     <div>
@@ -165,7 +171,7 @@ const handleInputData = (ev) => {
           <section className='createCard'>
             <button
               className='createCard_Btn'
-              onClick='{handleClickCreateCard}'
+              onClick={handleClickCreateCard}
             >
               Crear Tarjeta
             </button>
