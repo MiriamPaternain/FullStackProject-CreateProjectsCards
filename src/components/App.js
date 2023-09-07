@@ -185,16 +185,26 @@ function App() {
               Crear Tarjeta
             </button>
           </section>
-
-          <section className='cardMessage'>
-            <span className='cardMessage_hidden'>
-              {' '}
-              La tarjeta ha sido creada:{' '}
-            </span>
-            <a href='./#' className='' target='_blank' rel='noreferrer'>
-              {' '}
-            </a>
-          </section>
+          {serverResponse.success === true && (
+            <section className='cardMessage'>
+              <span className='cardMessage_hidden'>
+                
+                La tarjeta ha sido creada:
+              </span>
+              <a href={serverResponse.cardURL} className='' target='_blank' rel='noreferrer'>
+                {serverResponse.cardURL}
+              </a>
+            </section>
+          )}
+          {serverResponse.success === false && (
+            <section className='cardMessage'>
+              <span className='cardMessage_hidden'>
+                
+                Ha habido algún error al crear la tarjeta:
+              </span>
+              <span>{serverResponse.error}</span>
+            </section>
+          )}
         </section>
       </div>
     </div>
