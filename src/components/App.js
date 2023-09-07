@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import '../styles/App.scss';
-import cover from '../images/cover.jpeg';
-import user from '../images/user.jpeg';
 import Header from './Header';
 import Preview from './Preview';
 
@@ -47,7 +45,7 @@ function App() {
     <div>
       <div className='main'>
         <Header />
-        <Preview />
+        <Preview data={data}/>
         
 
         <section className='form'>

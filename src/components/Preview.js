@@ -1,4 +1,6 @@
-function Header() {
+import cover from '../images/cover.jpeg';
+import user from '../images/user.jpeg';
+function Header({data}) {
 
     return(
       <section className='preview'>
