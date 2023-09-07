@@ -16,11 +16,18 @@ function App() {
     desc: '',
     author: '',
     job: '',
+    photo: '',
+    image: '',
   });
 
   const [serverResponse, setServerResponse] = useState({});
 
   //Funciones
+
+  const handleChangeForm = (propName, value) => {
+const clonedData = { ...data, [propName]: value};
+setData(clonedData);
+  }
 
   const handleInputData = (ev) => {
     const clonedData = { ...data, [ev.target.id]: ev.target.value };
@@ -40,13 +47,19 @@ function App() {
         setServerResponse(data);
       });
   };
-
+console.log(data);
   return (
     <div>
       <div className='main'>
         <Header />
         <Preview data={data}/>
-        <Form data={data} handleInputData={handleInputData} handleClickCreateCard={handleClickCreateCard} serverResponse={serverResponse}/>
+        <Form 
+        data={data} 
+        handleInputData={handleInputData} 
+        handleClickCreateCard={handleClickCreateCard} 
+        serverResponse={serverResponse}
+        handleChangeForm={handleChangeForm}
+        />
 
         
       </div>

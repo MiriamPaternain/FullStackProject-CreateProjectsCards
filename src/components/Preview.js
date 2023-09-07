@@ -4,11 +4,11 @@ import user from '../images/user.jpeg';
 function Preview({ data }) {
   return (
     <section className='preview'>
-      <img className='preview_coverImage' src={cover} alt='' />
+      <img className='preview_coverImage' src={data.image || cover} alt='' />
 
       <section className='preview_author'>
         <section className='preview_author--personalInfo'>
-          <img className='preview_author--image' src={user} alt='' />
+          <img className='preview_author--image' src={data.photo || user} alt='' />
           <p className='preview_author--job'>
             {data.job || 'Puesto de trabajo'}
           </p>

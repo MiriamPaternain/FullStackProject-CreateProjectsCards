@@ -1,6 +1,15 @@
 import GetAvatar from "./GetAvatar";
 
-function Form({data, handleInputData, handleClickCreateCard, serverResponse}) {
+function Form({data, handleInputData, handleClickCreateCard, serverResponse, handleChangeForm}) {
+
+const handleImage = (file) => {
+handleChangeForm ('image', file);
+}
+
+const handlePhoto = (file) => {
+    handleChangeForm ('photo', file);
+}
+
   return (
     <section className='form'>
       <h2 className='form_title'>Información</h2>
@@ -95,10 +104,16 @@ function Form({data, handleInputData, handleClickCreateCard, serverResponse}) {
       </fieldset>
 
       <section className='uploadBtn'>
-        <GetAvatar text='Subir foto de proyecto'/>
-        <GetAvatar text='Subir foto de autora' />
+        <GetAvatar 
+        text='Subir foto de proyecto'
+        avatar={data.image}
+        updateAvatar={handleImage} />
+        <GetAvatar 
+        text='Subir foto de autora' 
+        avatar={data.photo}
+        updateAvatar={handlePhoto} />
       </section>
-      
+
       <section className='createCard'>
         <button className='createCard_Btn' onClick={handleClickCreateCard}>
           Crear Tarjeta
