@@ -21,60 +21,90 @@ const handlePhoto = (file) => {
       </section>
 
       <fieldset className='form_projectInfo--projectForm'>
-        <input
-          className='input'
-          type='text'
-          placeholder='Nombre del proyecto'
-          name='name'
-          id='name'
-          value={data.name}
-          onInput={handleInputData}
-        />
-        <input
-          className='input'
-          type='text'
-          name='slogan'
-          id='slogan'
-          placeholder='Slogan'
-          value={data.slogan}
-          onInput={handleInputData}
-        />
-        <input
-          className='input'
-          type='text'
-          name='repo'
-          id='repo'
-          placeholder='Repo'
-          value={data.repo}
-          onInput={handleInputData}
-        />
-        <input
-          className='input'
-          type='text'
-          placeholder='Demo'
-          name='demo'
-          id='demo'
-          value={data.demo}
-          onInput={handleInputData}
-        />
-        <input
-          className='input'
-          type='text'
-          placeholder='Tecnologías'
-          name='technologies'
-          id='technologies'
-          value={data.technologies}
-          onInput={handleInputData}
-        />
-        <textarea
-          className='textarea'
-          type='text'
-          placeholder='Descripción'
-          name='desc'
-          id='desc'
-          value={data.desc}
-          onInput={handleInputData}
-        ></textarea>
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            placeholder='Nombre del proyecto'
+            name='name'
+            id='name'
+            value={data.name}
+            onInput={handleInputData}
+          />
+          {data.name === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            name='slogan'
+            id='slogan'
+            placeholder='Slogan'
+            value={data.slogan}
+            onInput={handleInputData}
+          />
+          {data.slogan === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            name='repo'
+            id='repo'
+            placeholder='Repo'
+            value={data.repo}
+            onInput={handleInputData}
+          />
+          {data.repo === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            placeholder='Demo'
+            name='demo'
+            id='demo'
+            value={data.demo}
+            onInput={handleInputData}
+          />
+          {data.demo === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            placeholder='Tecnologías'
+            name='technologies'
+            id='technologies'
+            value={data.technologies}
+            onInput={handleInputData}
+          />
+          {data.technologies === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
+        <div className='form_projectInfo--projectForm'>
+          <textarea
+            className='textarea'
+            type='text'
+            placeholder='Descripción'
+            name='desc'
+            id='desc'
+            value={data.desc}
+            onInput={handleInputData}
+          ></textarea>
+          {data.desc === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
       </fieldset>
 
       <section className='form_authorInfo'>
@@ -83,24 +113,34 @@ const handlePhoto = (file) => {
       </section>
 
       <fieldset className='form_authorInfo--authorForm'>
-        <input
-          className='input'
-          type='text'
-          placeholder='Nombre'
-          name='autor'
-          id='autor'
-          value={data.autor}
-          onInput={handleInputData}
-        />
-        <input
-          className='input'
-          type='text'
-          placeholder='Trabajo'
-          name='job'
-          id='job'
-          value={data.job}
-          onInput={handleInputData}
-        />
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            placeholder='Nombre'
+            name='autor'
+            id='autor'
+            value={data.autor}
+            onInput={handleInputData}
+          />
+          {data.autor === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
+        <div className='form_projectInfo--projectForm'>
+          <input
+            className='input'
+            type='text'
+            placeholder='Trabajo'
+            name='job'
+            id='job'
+            value={data.job}
+            onInput={handleInputData}
+          />
+          {data.job === "" && (
+            <div className='error-message'>*Este campo es obligatorio.</div>
+          )}
+        </div>
       </fieldset>
 
       <section className='uploadBtn'>
