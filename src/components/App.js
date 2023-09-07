@@ -15,20 +15,12 @@ function App() {
     author: '',
     job: '',
   });
-
-  //Funciones manejadoras de eventos
-  const handleInputData = (ev) => {
-    setData({
-      projectName: ev.target.value,
-      slogan: data.slogan,
-      repo: data.repo,
-      demo: data.demo,
-      technologies: data.technologies,
-      desc: data.desc,
-      author: data.author,
-      job: data.job,
-    });
-  };
+const handleInputData = (ev) => {
+  setData({
+    ...data, 
+    [ev.target.name]: ev.target.value,
+  });
+};
 
   return (
     <div>
