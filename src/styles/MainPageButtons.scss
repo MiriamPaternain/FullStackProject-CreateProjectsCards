@@ -1,45 +1,54 @@
 .uploadBtn {
+    display: flex;
+  text-align: center;
+  margin: 15px;
+
+  justify-content: center;
+  font-size: 13px;
+
+  &_style {
+    width: 160px;
+    margin-top: 10px;
+    color: white;
     text-align: center;
+    border: none;
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 
-    &_project {
+  /* &_author {
         width: 160px;
         margin-top: 10px;
         color: white;
         text-align: center;
         border: none;
-        height: 43px;
-        background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
-        border-radius: 40px;
-    }
-
-    &_author {
-        width: 160px;
-        margin-top: 10px;
-        color: white;
-        text-align: center;
-        border: none;
 
         height: 43px;
         background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
         border-radius: 40px;
-    }
+    } */
 }
 
 .createCard {
-    text-align: center;
+  text-align: center;
 
-    &_Btn {
-        width: 160px;
-        margin-top: 10px;
-        color: white;
-        text-align: center;
-        border: none;
-        height: 43px;
-        background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
-        border-radius: 40px;
-        width: 200px;
-        border: solid 2px white;
-    }
+  &_Btn {
+    width: 160px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    height: 43px;
+    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    border-radius: 40px;
+    width: 200px;
+    border: solid 2px white;
+  }
 }
 
 /* .btn-color {
@@ -55,11 +64,11 @@
 }
  */
 .cardMessage {
-    color: white;
-    text-align: center;
-    padding: 20px;
+  color: white;
+  text-align: center;
+  padding: 20px;
 
-    &_hidden {
-        display: none;
-    }
+  &_hidden {
+    display: none;
+  }
 }

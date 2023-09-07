@@ -1,3 +1,5 @@
+import GetAvatar from "./GetAvatar";
+
 function Form({data, handleInputData, handleClickCreateCard, serverResponse}) {
   return (
     <section className='form'>
@@ -93,9 +95,10 @@ function Form({data, handleInputData, handleClickCreateCard, serverResponse}) {
       </fieldset>
 
       <section className='uploadBtn'>
-        <button className='uploadBtn_project'>Subir foto de proyecto</button>
-        <button className='uploadBtn_author'>Subir foto de autora</button>
+        <GetAvatar text='Subir foto de proyecto'/>
+        <GetAvatar text='Subir foto de autora' />
       </section>
+      
       <section className='createCard'>
         <button className='createCard_Btn' onClick={handleClickCreateCard}>
           Crear Tarjeta
