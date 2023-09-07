@@ -120,17 +120,21 @@ const handlePhoto = (file) => {
         </button>
       </section>
       {serverResponse.success === true && (
-        <section className='cardMessage'>
-          <span className='cardMessage_hidden'>La tarjeta ha sido creada:</span>
-          <a
-            href={serverResponse.cardURL}
-            className=''
-            target='_blank'
-            rel='noreferrer'
-          >
-            {serverResponse.cardURL}
-          </a>
-        </section>
+        <div className="createCard">
+          <section className='cardMessage'>
+            <span className='cardMessage/* _hidden */'>La tarjeta ha sido creada:</span>
+          </section>
+           <button className="urlBtn">
+            <a
+              href={serverResponse.cardURL}
+              className='urlBtn_link'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Ver Tarjeta
+            </a>
+            </button>
+        </div>
       )}
       {serverResponse.success === false && (
         <section className='cardMessage'>
