@@ -8,13 +8,13 @@ function App() {
   //Variables de estado
 
   const [data, setData] = useState({
-    projectName: '',
+    name: '',
     slogan: '',
     repo: '',
     demo: '',
     technologies: '',
     desc: '',
-    author: '',
+    autor: '',
     job: '',
     photo: '',
     image: '',
@@ -35,7 +35,7 @@ setData(clonedData);
   };
 
   const handleClickCreateCard = (ev) => {
-    ev.preventDesfault();
+    ev.preventDefault();
 
     fetch('https://dev.adalab.es/api/projectCard', {
       method: 'POST',

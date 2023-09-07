@@ -25,9 +25,9 @@ const handlePhoto = (file) => {
           className='input'
           type='text'
           placeholder='Nombre del proyecto'
-          name='projectName'
-          id='projectName'
-          value={data.projectName}
+          name='name'
+          id='name'
+          value={data.name}
           onInput={handleInputData}
         />
         <input
@@ -87,9 +87,9 @@ const handlePhoto = (file) => {
           className='input'
           type='text'
           placeholder='Nombre'
-          name='author'
-          id='author'
-          value={data.author}
+          name='autor'
+          id='autor'
+          value={data.autor}
           onInput={handleInputData}
         />
         <input
@@ -107,11 +107,11 @@ const handlePhoto = (file) => {
         <GetAvatar 
         text='Subir foto de proyecto'
         avatar={data.image}
-        updateAvatar={handleImage} />
+        updateAvatar={handlePhoto} />
         <GetAvatar 
         text='Subir foto de autora' 
         avatar={data.photo}
-        updateAvatar={handlePhoto} />
+        updateAvatar={handleImage} />
       </section>
 
       <section className='createCard'>
