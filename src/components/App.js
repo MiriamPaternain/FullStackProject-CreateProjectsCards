@@ -21,7 +21,7 @@ function App() {
   });
 
   const [serverResponse, setServerResponse] = useState({});
-
+const [createCardClicked, setCreateCardClicked] = useState(false);
   //Funciones
 
   const handleChangeForm = (propName, value) => {
@@ -36,7 +36,7 @@ function App() {
 
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
-    
+    setCreateCardClicked(true);
     fetch('https://dev.adalab.es/api/projectCard', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -59,6 +59,7 @@ function App() {
           handleClickCreateCard={handleClickCreateCard}
           serverResponse={serverResponse}
           handleChangeForm={handleChangeForm}
+          createCardClicked={createCardClicked}
         />
       </div>
     </div>

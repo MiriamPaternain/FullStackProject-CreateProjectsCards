@@ -1,6 +1,6 @@
 import GetAvatar from "./GetAvatar";
 
-function Form({data, handleInputData, handleClickCreateCard, serverResponse, handleChangeForm}) {
+function Form({data, handleInputData, handleClickCreateCard, serverResponse, handleChangeForm, createCardClicked}) {
 
 const handleImage = (file) => {
 handleChangeForm ('image', file);
@@ -31,7 +31,7 @@ const handlePhoto = (file) => {
             value={data.name}
             onInput={handleInputData}
           />
-          {data.name === "" && (
+          {createCardClicked && data.name === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -45,7 +45,7 @@ const handlePhoto = (file) => {
             value={data.slogan}
             onInput={handleInputData}
           />
-          {data.slogan === "" && (
+          {createCardClicked && data.slogan === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -59,7 +59,7 @@ const handlePhoto = (file) => {
             value={data.repo}
             onInput={handleInputData}
           />
-          {data.repo === "" && (
+          {createCardClicked && data.repo === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -73,7 +73,7 @@ const handlePhoto = (file) => {
             value={data.demo}
             onInput={handleInputData}
           />
-          {data.demo === "" && (
+          {createCardClicked && data.demo === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -87,7 +87,7 @@ const handlePhoto = (file) => {
             value={data.technologies}
             onInput={handleInputData}
           />
-          {data.technologies === "" && (
+          {createCardClicked && data.technologies === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -101,7 +101,7 @@ const handlePhoto = (file) => {
             value={data.desc}
             onInput={handleInputData}
           ></textarea>
-          {data.desc === "" && (
+          {createCardClicked && data.desc === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -123,7 +123,7 @@ const handlePhoto = (file) => {
             value={data.autor}
             onInput={handleInputData}
           />
-          {data.autor === "" && (
+          {createCardClicked && data.autor === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
@@ -137,7 +137,7 @@ const handlePhoto = (file) => {
             value={data.job}
             onInput={handleInputData}
           />
-          {data.job === "" && (
+          {createCardClicked && data.job === "" && (
             <div className='error-message'>*Este campo es obligatorio.</div>
           )}
         </div>
