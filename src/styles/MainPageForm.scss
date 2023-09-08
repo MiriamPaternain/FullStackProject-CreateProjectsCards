@@ -1,99 +1,107 @@
 .form {
-    background-color: #302c42;
-    padding: 10px;
-    border-radius: 10px;
-margin-bottom: 60px;
-    &_title {
-        color: #ffffff;
-        text-align: center;
+  background-color: #302c42;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+@media screen and (min-width: 1024px){
+    width: 40%;
+    margin-right: 25px;
+}
+  &_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &_projectInfo {
+    padding: 20px;
+    text-align: center;
+    color: white;
+
+    &--subtitle {
+      padding-bottom: 10px;
     }
 
-    &_projectInfo {
-        padding: 20px;
-        text-align: center;
-        color: white;
-
-        &--subtitle {
-            padding-bottom: 10px;
-        }
-
-        &--line {
-            width: 100%;
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right,
-                    rgba(255, 255, 255, 0),
-                    rgba(255, 255, 255, 0.75),
-                    rgba(255, 255, 255, 0));
-        }
-
-        &--projectForm {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            border: none;
-        }
+    &--line {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
     }
 
-    &_authorInfo {
-        padding: 20px;
-        text-align: center;
-        color: white;
-
-        &--subtitle {
-            padding-bottom: 10px;
-        }
-
-        &--line {
-            width: 100%;
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right,
-                    rgba(255, 255, 255, 0),
-                    rgba(255, 255, 255, 0.75),
-                    rgba(255, 255, 255, 0));
-        }
-
-        &--authorForm {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            border: none;
-        }
+    &--projectForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: none;
     }
+  }
+
+  &_authorInfo {
+    padding: 20px;
+    text-align: center;
+    color: white;
+
+    &--subtitle {
+      padding-bottom: 10px;
+    }
+
+    &--line {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    &--authorForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: none;
+    }
+  }
 }
 .textarea {
-    background-color: #302c42;
-    border-color: white;
-    border-radius: 15px;
-    height: 45px;
-    color: #ffffff;
-    padding-left: 15px;
-    padding-top: 5px;
-    overflow-y: scroll;
-    height: 110px;
+  background-color: #302c42;
+  border-color: white;
+  border-radius: 15px;
+  height: 45px;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-top: 5px;
+  overflow-y: scroll;
+  height: 110px;
 }
 
 .input {
-    background-color: #302c42;
-    border-color: white;
-    border-radius: 15px;
-    height: 42.72px;
-    color: #ffffff;
-    padding-left: 15px;
-    padding-top: 5px;
+  background-color: #302c42;
+  border-color: white;
+  border-radius: 15px;
+  height: 42.72px;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-top: 5px;
 }
 
 .input::placeholder,
 .textarea::placeholder {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-.error-message{
-    color: #a395e0;
-    font-size: 13px;
-    padding: 5px;
+.error-message {
+  color: #a395e0;
+  font-size: 13px;
+  padding: 5px;
 }
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
