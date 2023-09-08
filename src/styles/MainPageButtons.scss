@@ -12,11 +12,12 @@
     text-align: center;
     border: none;
     height: 43px;
-    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    background: linear-gradient(90deg, #302c42 -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   /* &_author {
@@ -31,7 +32,12 @@
         border-radius: 40px;
     } */
 }
+.uploadBtn_style:hover{
+  color: #302c42;
+  background: #c0b7e8;
+  box-shadow: 2px 2px 10px;
 
+}
 .createCard {
   text-align: center;
 
@@ -42,13 +48,18 @@
     text-align: center;
     border: none;
     height: 43px;
-    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    background: linear-gradient(90deg, #302c42 -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
     width: 200px;
     border: solid 2px white;
+    cursor: pointer;
   }
 }
-
+.createCard_Btn:hover{
+  color: #302c42;
+  background: #c0b7e8;
+  box-shadow: 2px 2px 10px;
+}
 .createCard{
   display: flex;
 flex-direction: column;
