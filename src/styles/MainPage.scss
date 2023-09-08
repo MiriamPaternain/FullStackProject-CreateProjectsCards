@@ -1,13 +1,20 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #302c42;
+  background-image: url(../images/background.jpg);
+    background-size: contain;
+    background-position: center;
+    background-image: center;
 
   padding: 10px;
+  
   @media screen and (min-width: 768px) {
       display: flex;
       flex-direction: row;
     }
 }
-
+.background{
+  width: 100%;
+}
 
