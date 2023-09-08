@@ -25,9 +25,9 @@ function App() {
   //Funciones
 
   const handleChangeForm = (propName, value) => {
-const clonedData = { ...data, [propName]: value};
-setData(clonedData);
-  }
+    const clonedData = { ...data, [propName]: value };
+    setData(clonedData);
+  };
 
   const handleInputData = (ev) => {
     const clonedData = { ...data, [ev.target.id]: ev.target.value };
@@ -36,7 +36,7 @@ setData(clonedData);
 
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
-
+    
     fetch('https://dev.adalab.es/api/projectCard', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -47,21 +47,19 @@ setData(clonedData);
         setServerResponse(data);
       });
   };
-console.log(data);
+
   return (
     <div>
       <div className='main'>
         <Header />
-        <Preview data={data}/>
-        <Form 
-        data={data} 
-        handleInputData={handleInputData} 
-        handleClickCreateCard={handleClickCreateCard} 
-        serverResponse={serverResponse}
-        handleChangeForm={handleChangeForm}
+        <Preview data={data} />
+        <Form
+          data={data}
+          handleInputData={handleInputData}
+          handleClickCreateCard={handleClickCreateCard}
+          serverResponse={serverResponse}
+          handleChangeForm={handleChangeForm}
         />
-
-        
       </div>
     </div>
   );

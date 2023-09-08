@@ -162,7 +162,7 @@ const handlePhoto = (file) => {
       {serverResponse.success === true && (
         <div className="createCard">
           <section className='cardMessage'>
-            <span className='cardMessage/* _hidden */'>La tarjeta ha sido creada:</span>
+            <span className='cardMessage_hidden'>La tarjeta ha sido creada:</span>
           </section>
            <button className="urlBtn">
             <a
@@ -181,7 +181,7 @@ const handlePhoto = (file) => {
           <span className='cardMessage_hidden'>
             Ha habido algún error al crear la tarjeta:
           </span>
-          <span>{serverResponse.error}</span>
+          <span>Quedan campos obligatorios por rellenar</span>
         </section>
       )}
     </section>
