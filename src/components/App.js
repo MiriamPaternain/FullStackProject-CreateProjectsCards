@@ -50,8 +50,9 @@ const [createCardClicked, setCreateCardClicked] = useState(false);
 
   return (
     <div>
+       <Header />
       <div className='main'>
-        <Header />
+       
         <Preview data={data} />
         <Form
           data={data}
