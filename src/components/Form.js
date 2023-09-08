@@ -144,14 +144,25 @@ const handlePhoto = (file) => {
       </fieldset>
 
       <section className='uploadBtn'>
-        <GetAvatar 
-        text='Subir foto de proyecto'
-        avatar={data.image}
-        updateAvatar={handlePhoto} />
-        <GetAvatar 
-        text='Subir foto de autora' 
-        avatar={data.photo}
-        updateAvatar={handleImage} />
+        <div>
+          <GetAvatar
+          text='Subir foto de proyecto'
+          avatar={data.image}
+          updateAvatar={handlePhoto}
+          />
+          {createCardClicked && !data.photo && (
+              <div className='error-message'>*Este campo es obligatorio.</div>
+            )}
+        </div>
+        <div>
+          <GetAvatar
+          text='Subir foto de autora'
+          avatar={data.photo}
+          updateAvatar={handleImage} />
+          {createCardClicked && !data.image && (
+                <div className='error-message'>*Este campo es obligatorio.</div>
+              )}
+        </div>
       </section>
 
       <section className='createCard'>
