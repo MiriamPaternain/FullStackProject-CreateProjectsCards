@@ -6,7 +6,8 @@ import Form from './Form';
 import callToApi from '../services/Api';
 import getAllCardsApi from '../services/GetAllCardsApi';
 import { Route, Routes } from 'express';
-import Home from "./Home.js";
+import Home from './Home.js';
+import Footer from './Footer.js';
 
 function App() {
   //Variables de estado
@@ -25,7 +26,7 @@ function App() {
   });
 
   const [serverResponse, setServerResponse] = useState({});
-const [createCardClicked, setCreateCardClicked] = useState(false);
+  const [createCardClicked, setCreateCardClicked] = useState(false);
   //Funciones
 
   const handleChangeForm = (propName, value) => {
@@ -55,24 +56,33 @@ const [createCardClicked, setCreateCardClicked] = useState(false);
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-       <Header />
-      <div className='main'>
-       
-        <Preview data={data} />
-        <Form
-          data={data}
-          handleInputData={handleInputData}
-          handleClickCreateCard={handleClickCreateCard}
-          serverResponse={serverResponse}
-          handleChangeForm={handleChangeForm}
-          createCardClicked={createCardClicked}
+        <Route path='/' element={<Home />} />
+        <Route
+          path='/main'
+          element={
+            <>
+              <Header />
+
+              <div className='main'>
+                <Preview data={data} />
+                <Form
+                  data={data}
+                  handleInputData={handleInputData}
+                  handleClickCreateCard={handleClickCreateCard}
+                  serverResponse={serverResponse}
+                  handleChangeForm={handleChangeForm}
+                  createCardClicked={createCardClicked}
+                />
+                <Footer />
+              </div>
+            </>
+          }
         />
-      </div>
+
+        <Route path='*' element={<h2>Error 404: Página no encontrada</h2>} />
+      </Routes>
     </div>
   );
 }
 
-/* export*/
 export default App;
