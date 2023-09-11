@@ -8,7 +8,6 @@ const server = express();
 
 server.use(cors());
 server.use(express.json({ limit: '100mb' }));
-server.set('view engine', 'ejs');
 
 async function connectDB() {
   const connection = await mysql.createConnection({
@@ -66,14 +65,4 @@ server.post('/api/projects/add', async (req, res) => {
   console.log(result);
   res.json({});
   connect.end();
-});
-
-//http://localhost:4000/project/${resultProject.insertId}
-
-server.get("/project/:idProject", async (req, res) =>{
-const id = req.params.idProject;
-const query = "SELECT * FROM autor INNER JOIN projects ON fk_autor = id WHERE id = ?";
-  const connect = await connectDB();
-  const [results] = await connect.query(query, id);
-  res.render('detalProject', results[0]);
 });
