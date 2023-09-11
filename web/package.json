@@ -18,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "dev": "nodemon src/index.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
