@@ -5,6 +5,8 @@ import Preview from './Preview';
 import Form from './Form';
 import callToApi from '../services/Api';
 import getAllCardsApi from '../services/GetAllCardsApi';
+import { Route, Routes } from 'express';
+import Home from "./Home.js";
 
 function App() {
   //Variables de estado
@@ -52,6 +54,9 @@ const [createCardClicked, setCreateCardClicked] = useState(false);
 
   return (
     <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
        <Header />
       <div className='main'>
        
