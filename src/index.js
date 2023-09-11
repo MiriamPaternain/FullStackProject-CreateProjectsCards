@@ -13,6 +13,13 @@ mysql.createConnection({
     database: process.env.DATABASE,
     user: process.env.USER,
     password: process.env.PASS,
+}).then((conn)=>{
+    connection = conn;
+    connection
+    .connect()
+    .then(()=> {
+        console.log(`Conexión establecida ${connection.theadId}`);
+    });
 });
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, ()=>{
