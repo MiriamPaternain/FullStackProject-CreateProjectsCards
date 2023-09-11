@@ -30,9 +30,39 @@ server.listen(PORT, () => {
 });
 
 server.get('/api/allprojects', async (req, res) => {
-    const select = 'SELECT * FROM projects ';
-    const connect = await connectDB();
-    const [result] = await connect.query(select);
-    console.log(result);
-    res.json(result);
+  const select = 'SELECT * FROM projects ';
+  const connect = await connectDB();
+  const [result] = await connect.query(select);
+  console.log(result);
+  res.json(result);
+});
+
+server.post('/api/projects/add', async (req, res) => {
+  const body = req.body;
+  let insertAutor = 'INSERT INTO Autor (autor, job, photo) VALUES (?, ?, ?)';
+  const connect = await connectDB();
+  const [result] = await connect.query(insertAutor, [
+    body.autor,
+    body.job,
+    body.photo,
+  ]);
+
+  const idAutor = result.insertId;
+
+  let insertProject =
+    'INSERT INTO projects (name, slogan, repo, demo, technologies, desc, image, fk_autor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+  const [resltProject] = await connect.query(insertProject, [
+    body.name,
+    body.slogan,
+    body.repo,
+    body.demo,
+    body.technologies,
+    body.desc,
+    body.image,
+    body.fk_autor,
+  ]);
+
+  console.log(result);
+  res.json({});
+  connect.end();
 });
