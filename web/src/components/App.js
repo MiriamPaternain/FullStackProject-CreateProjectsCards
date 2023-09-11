@@ -37,7 +37,7 @@ const [createCardClicked, setCreateCardClicked] = useState(false);
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
     setCreateCardClicked(true);
-    fetch('https://dev.adalab.es/api/projectCard', {
+    fetch('https://localhost:4000/api/allprojects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
