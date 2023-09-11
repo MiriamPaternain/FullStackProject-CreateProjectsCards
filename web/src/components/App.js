@@ -3,9 +3,9 @@ import '../styles/App.scss';
 import Header from './Header';
 import Preview from './Preview';
 import Form from './Form';
+import { Route, Routes } from 'react-router-dom';
 import callToApi from '../services/Api';
 import getAllCardsApi from '../services/GetAllCardsApi';
-import { Route, Routes } from 'express';
 import Home from './Home.js';
 import Footer from './Footer.js';
 
@@ -73,12 +73,11 @@ function App() {
                   handleChangeForm={handleChangeForm}
                   createCardClicked={createCardClicked}
                 />
-                <Footer />
+                {/* <Footer /> */}
               </div>
             </>
           }
         />
-
         <Route path='*' element={<h2>Error 404: Página no encontrada</h2>} />
       </Routes>
     </div>

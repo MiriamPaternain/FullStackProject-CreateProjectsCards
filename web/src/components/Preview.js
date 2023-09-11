@@ -1,4 +1,4 @@
-import cover from '../images/cover.jpeg';
+import cover from '../images/cover.jpg';
 import user from '../images/user.jpeg';
 
 function Preview({ data }) {
